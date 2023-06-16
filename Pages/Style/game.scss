@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000000;
+}
+.home {
+    background: url(../../Illustrations/IllustrationGame/Batgame_1.png) no-repeat top center/cover;
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*les couleurs*/
+$black: #000000;
+$blue: #19587D;
+$white: #ffffff;
+$grey: #C4C4C4;
+$yellow: #F8F184;
+$greyButtonColorOne: rgba(237, 222, 191, 0.4);
+$greyButtonColorTwo: rgba(25, 88, 125, 0.4);
+$redButtonColor: rgba(137, 0, 8, 0.6);
+$greyButtonColorHoverOne: rgba(237, 222, 191, 0.6);
+$greyButtonColorHoverTwo: rgba(25, 88, 125, 0.6);
+$redButtonColorHover: rgba(137, 0, 8, 0.8);
+/*bordure de la ligne*/
+$lineDiscreteColor: rgba(188, 187, 189, 0.2);
+$bordureWidthLeftHead: 0.1rem;
+$bordureWidthRightHead: 0.1rem;
+$bordureWidthBottomHead: 0.1rem;
+$bordureWidthLeftHero: 0.1rem;
+$bordureWidthRightHero: 0.1rem;
+$bordureWidthTopHero: 0.1rem;
+$bordureStyle: solid;
+/*bordure en haut*/
+$bordureHaut: 132px;
+/*bordure largeur*/
+$bordureLargeur: 102px;
+/* largeur du hero class */
+$heightHero: 110vh;
+/*Les font*/
+$rajdhani: 'Rajdhani', sans-serif;
+$spaceGrotesk: 'Space Grotesk', sans-serif;
+$fontSizeH1: 36px;
+$fontSizeH1Responsive: 34px;
+$fontSizeButton: 20px;
+$fontSizeButtonResponsive: 18px;
+$fontSizeTitleH2: 12px;
+$fontSizeSubTitle: 22px;
+$fontSizeSubTitleResponsive: 20px;
+$fontSizeTextFirst: 18px;
+$fontSizeTextSeconds: 12px;
+$fontSizeTextFirstResponsive: 16px;
+$fontWeightBold: bold;
+$fontWeightRegular: regular;
+
+.home .menu{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-bottom-width: $bordureWidthBottomHead;
+    border-left-width: $bordureWidthLeftHead;
+    border-right-width: $bordureWidthRightHead;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    height: $bordureHaut;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-content: center;
+}
+.home .menu .one{
+    padding-left: 4rem;
+}
+.home .menu .one img{
+    &:hover{
+        cursor: pointer;
+        filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+    }
+}
+.home .menu .two ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.home .menu .two ul li{
+    list-style: none;
+    padding: 0 2em;
+}
+.home .menu .two ul li:nth-child(2) a{
+    text-decoration: underline;
+}
+.home .menu .two ul li a{
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+    font-family: $rajdhani;
+    font-size: $fontSizeSubTitle;
+}
+.home .menu div h1{
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    text-decoration: underline;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.home .hero{
+    width: 86%;
+    height: $heightHero;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top-width: $bordureWidthTopHero;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.home .hero aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 300px;
+    position: fixed;
+    right: 3.2%;
+    top: 32%;
+    z-index: 1;
+}
+.home .hero aside div img{
+    &:hover{
+        cursor: pointer;
+        filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+    }
+}
+.home .hero aside .flèche-bat a img{
+    &:hover{
+        filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+    }
+} 
+@media screen and (max-width: 768px){
+    .home{
+        background:url(../Illustrations/Bathome1.png) no-repeat center center/contain;
+    }
+    .home .menu{
+        display: flex;
+        flex-direction: column;
+        height: 40vh;
+    }
+    .home .menu .two ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .home .menu .two ul li{
+        margin: 1em 0;
+    }
+    .home .menu .one img{
+        width: 80px;
+        height: 56px;
+    }
+    .home .hero aside{
+        right: -4.3%;
+    }
+    .home .hero aside div.flèche-bat img{
+        width: 2em;
+        height: 2em;
+    }
+    .home .menu div h1{
+        font-size: $fontSizeH1Responsive;
+    }
+}
