@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+/*Couleurs*/
+$greyButtonColorOne: rgba(237, 222, 191, 1);
+$greyButtonColorTwo: rgba(25, 88, 125, 1);
+$white: white;
+$black: rgba(0, 0, 0, 0.6);
+/*Font-family*/
+$rajdhani: 'Rajdhani', sans-serif;
+$fontSizeH1: 36px;
+$fontSizeH1Responsive: 34px;
+/*tout elements*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    background: linear-gradient(.25turn, $greyButtonColorOne, $greyButtonColorTwo);
+}
+main{
+    width: 100%;
+    background: linear-gradient(.25turn, $greyButtonColorOne, $greyButtonColorTwo);
+}
+main a section{
+    width: 86%;
+    height: 68vh;
+    border-radius: 12px;
+    display: block;
+    margin: 6rem auto;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(.25turn, $greyButtonColorOne, $greyButtonColorTwo);
+    box-shadow: 1em 1em 2em $black;
+}
+main a{
+    text-decoration: none;
+}
+main a section h1{
+    text-transform: uppercase;
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+}
+@media screen and (max-width: 768px){
+    main a section h1{
+        font-size: $fontSizeH1Responsive;
+    }
+}

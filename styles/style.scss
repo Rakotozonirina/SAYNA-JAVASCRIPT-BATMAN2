@@ -1,0 +1,1083 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000000;
+}
+.home {
+    background: url(../Illustrations/Bathome1.png) no-repeat top center/cover;
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*les couleurs*/
+$black: #000000;
+$blue: #19587D;
+$white: #ffffff;
+$grey: #C4C4C4;
+$yellow: #F8F184;
+$greyButtonColorOne: rgba(237, 222, 191, 0.4);
+$greyButtonColorTwo: rgba(25, 88, 125, 0.4);
+$redButtonColor: rgba(137, 0, 8, 0.6);
+$greyButtonColorHoverOne: rgba(237, 222, 191, 0.6);
+$greyButtonColorHoverTwo: rgba(25, 88, 125, 0.6);
+$redButtonColorHover: rgba(137, 0, 8, 0.8);
+/*bordure de la ligne*/
+$lineDiscreteColor: rgba(188, 187, 189, 0.2);
+$bordureWidthLeftHead: 0.1rem;
+$bordureWidthRightHead: 0.1rem;
+$bordureWidthBottomHead: 0.1rem;
+$bordureWidthLeftHero: 0.1rem;
+$bordureWidthRightHero: 0.1rem;
+$bordureWidthTopHero: 0.1rem;
+$bordureStyle: solid;
+/*bordure en haut*/
+$bordureHaut: 132px;
+/*bordure largeur*/
+$bordureLargeur: 102px;
+/* largeur du hero class */
+$heightHero: 110vh;
+/*Les font*/
+$rajdhani: 'Rajdhani', sans-serif;
+$spaceGrotesk: 'Space Grotesk', sans-serif;
+$fontSizeH1: 36px;
+$fontSizeH1Responsive: 34px;
+$fontSizeButton: 20px;
+$fontSizeButtonResponsive: 18px;
+$fontSizeTitleH2: 12px;
+$fontSizeSubTitle: 22px;
+$fontSizeSubTitleResponsive: 20px;
+$fontSizeTextFirst: 18px;
+$fontSizeTextSeconds: 12px;
+$fontSizeTextFirstResponsive: 16px;
+$fontWeightBold: bold;
+$fontWeightRegular: regular;
+
+.home .menu{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-bottom-width: $bordureWidthBottomHead;
+    border-left-width: $bordureWidthLeftHead;
+    border-right-width: $bordureWidthRightHead;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    height: $bordureHaut;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-content: center;
+}
+.home .menu .one{
+    padding-left: 4rem;
+}
+.home .menu .one img{
+    &:hover{
+        cursor: pointer;
+        filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+    }
+}
+.home .menu .two h1{
+    text-align: right;
+    margin-right: 4rem;
+}
+.home .menu div h1{
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    text-decoration: underline;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.home .hero{
+    width: 86%;
+    height: $heightHero;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top-width: $bordureWidthTopHero;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.home .hero article{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home .hero article div.contenu-text{
+    width: 44%;
+    text-align: center;
+}
+.home .hero article div.contenu-bouton{
+    width: 44%;
+    display: flex;
+    justify-content: space-around;
+}
+.home .hero article div.contenu-text p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextFirst;
+}
+.home .hero article div.contenu-text h1{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeH1;
+    padding: 0.5em 0;
+}
+.home .hero aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 300px;
+    position: fixed;
+    right: 3.2%;
+    top: 32%;
+    z-index: 1;
+}
+.home .hero aside div img{
+    &:hover{
+        cursor: pointer;
+        filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+    }
+}
+.home .hero aside .flèche-bat a img{
+    &:hover{
+        filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+    }
+} 
+/*variable de background-gradient*/
+$firstGradient: $greyButtonColorOne, $greyButtonColorTwo;
+$secondGradient: $greyButtonColorOne, $redButtonColor;
+$firstGradientHover: $greyButtonColorHoverOne, $greyButtonColorHoverTwo;
+$secondGradientHover: $greyButtonColorHoverOne, $redButtonColorHover;
+/*Button custom*/
+.home .hero div.contenu-bouton .bouton{
+    padding: 1rem 2rem;
+    font-family: $rajdhani;
+    font-size: $fontSizeButton;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(.25turn, $firstGradient, $secondGradient);
+    color: $white;
+    transition: background .3s ease-in-out;
+    &:hover{
+        background: linear-gradient(.25turn, $firstGradientHover, $secondGradientHover);
+    }
+}
+/* Cinéma Batman */
+.cinema-batman{
+    background-color: $black;
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cinema-batman .art{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    padding-top: 4rem;
+}
+.cinema-batman .art article h1{
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    padding: 0 4rem;
+}
+.cinema-batman .art article p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextFirst;
+    padding: 2rem 4rem;
+}
+.cinema-batman .contenu-cart-batman{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.cinema-batman .contenu-cart-batman .div{
+    display: grid;
+    justify-content: center;
+}
+.cinema-batman .contenu-cart-batman .one{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.cinema-batman .contenu-cart-batman .two{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.cinema-batman .contenu-cart-batman .three{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.cinema-batman .contenu-cart-batman .div p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeSubTitle;
+    font-weight: $fontWeightRegular;
+    text-align: center;
+    margin: 1rem 0;
+}
+/*Nemesis*/
+.nemesis{
+    background-color: $black;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nemesis .art{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    padding-top: 4rem;
+}
+.nemesis .art article {
+    position: relative;
+}
+.nemesis .art article h1{
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    padding-top: 6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.nemesis .art article img{
+    width: 9rem;
+    height: 8rem;
+    position: absolute;
+    top: 0%;
+    left: 12%;
+}
+.nemesis .art article p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextFirst;
+    padding: 1.5rem 4rem;
+}
+.nemesis .contenu-cart-nemesis{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.nemesis .contenu-cart-nemesis div{
+    display: grid;
+    justify-content: center;
+    z-index: 1;
+}
+.nemesis .contenu-cart-nemesis .one{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.nemesis .contenu-cart-nemesis .two{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.nemesis .contenu-cart-nemesis .three{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.nemesis .contenu-cart-nemesis div p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeSubTitle;
+    font-weight: $fontWeightRegular;
+    text-align: center;
+    margin: 1rem 0;
+}
+/*Styles Batman*/
+.stl-batman{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.stl-batman div{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+}
+.stl-batman div img{
+    position: absolute;
+    top: -46%;
+    right: 0%;
+}
+/*Alliés*/
+.allies{
+    background-color: $black;
+    width: 100%;
+    height: 115vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.allies .art{
+    width: 86%;
+    height: 30vh;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    position: relative;
+}
+.allies .art article{
+    position: absolute;
+    top: -58%;
+}
+.allies .art article h1{
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    text-transform: uppercase;
+    padding: 0 4rem;
+}
+.allies .art article p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextFirst;
+    padding: 2rem 4rem;
+}
+.allies .contenu-cart-allies {
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.allies .contenu-cart-allies .div{
+    display: grid;
+    justify-content: center;
+}
+.allies .contenu-cart-allies .one{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.allies .contenu-cart-allies .two{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.allies .contenu-cart-allies .three{
+    transition: transform .2s;
+    cursor: pointer;
+    &:hover{
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.1); /* Safari 3-8 */
+        transform: scale(1.1); 
+    }
+}
+.allies .contenu-cart-allies .div p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeSubTitle;
+    font-weight: $fontWeightRegular;
+    text-align: center;
+    margin: 1rem 0;
+}
+/* Justice league */
+.justice-league{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.justice-league .art{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+}
+.justice-league .art article h1{
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    padding-top: 6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.justice-league .art article p{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextFirst;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 6rem;
+}
+.cover-justice-league{
+    background: url(../Illustrations/Bathome11.png) no-repeat top center/cover;
+    width: 100%;
+    height: 100vh;
+    margin-top: 4rem;
+}
+/*Multimédia*/
+.multimedia{
+    width: 100%;
+    height: 137vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6rem 0;
+}
+.multimedia .contenu-multimedia{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+}
+.multimedia .contenu-multimedia h1{
+    color: $white;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    text-transform: uppercase;
+    padding: 0 4rem;
+}
+.multimedia .contenu-multimedia .slide{
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.multimedia .contenu-multimedia .slide button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.multimedia .contenu-multimedia .slide .card{
+    width: 50%;
+    height: 35vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.multimedia .contenu-multimedia .slide .card .batman-begins{
+    background: url(../Illustrations/Bathome_ba1.png) no-repeat center center/cover;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.multimedia .contenu-multimedia .slide .card article{
+    background: linear-gradient(.25turn, $firstGradient);
+    padding: 1rem;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+.multimedia .contenu-multimedia .slide .card article h2{
+    color: $grey;
+    font-size: $fontSizeTitleH2;
+    font-family: $spaceGrotesk;
+    font-weight: $fontWeightBold;
+    text-transform: uppercase;
+}
+.multimedia .contenu-multimedia .slide .card article p.one{
+    color: $grey;
+    font-family: $spaceGrotesk;
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeTextFirst;
+    padding: 0.3rem 0;
+}
+.multimedia .contenu-multimedia .slide .card article p.two{
+    color: $grey;
+    font-family: $spaceGrotesk;
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeTextFirst;
+}
+.multimedia .contenu-multimedia .slide .card article p.two span{
+    color: $yellow;
+}
+.multimedia .contenu-multimedia .slide .card article p.three{
+    color: $grey;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextSeconds;
+    font-weight: $fontWeightBold;
+    padding-top: 0.2rem;
+}
+.multimedia .annonce{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+}
+.multimedia .annonce video{
+    width: 70%;
+    height: 70vh;
+    display: block;
+    margin: 6rem auto;
+}
+/*Contact*/
+.contact{
+    width: 100%;
+    height: 140vh;
+    background: linear-gradient(.25turn, $firstGradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+}
+.contact .prenom-contact {
+    width: 66%;
+    height: 100vh;
+}
+.contact .prenom-contact .heading-one{
+    color: $grey;
+    font-family: $rajdhani;
+    font-size: $fontSizeH1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.contact .prenom-contact form .one {
+    display: flex;
+    flex-direction: column;
+}
+.contact .prenom-contact form .one .adresse-email{
+    color: $grey;
+    font-family: $spaceGrotesk;
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeSubTitle;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.contact .prenom-contact form .one input[type="email"]{
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    color: $grey;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $grey;
+}
+.contact .prenom-contact form .heading-two{
+    font-family: $spaceGrotesk;
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeSubTitle;
+    color: $grey;
+    margin: 1.5rem 0;
+}
+.contact .prenom-contact form .two{
+    margin-bottom: 1.5rem;
+}
+.contact .prenom-contact form .two .check-news{
+    color: $grey;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextFirst;
+}
+.contact .prenom-contact form .three {
+    display: flex;
+    flex-direction: column;
+}
+.contact .prenom-contact form .three #receive-news{
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    color: $grey;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $grey;
+}
+.contact .prenom-contact form .four{
+    display: flex;
+    flex-direction: column;
+}
+.contact .prenom-contact form .four input[type="text"]{
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    color: $grey;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $grey;
+}
+.contact .prenom-contact form .five{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .prenom-contact form .five input[type="button"]{
+    padding: 0.8rem 2rem;
+    font-family: $spaceGrotesk;
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeTextSeconds;
+    color: $grey;
+    position: relative;
+    border: 3px solid transparent;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(.25turn, $firstGradient);
+    background-image: linear-gradient(.25turn, $firstGradient);
+    background-origin: border-box;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: $grey;
+    &:hover{
+        color: $white;
+        background-clip: border-box;
+    }
+    margin: 0 2rem;
+    cursor: pointer;
+}
+.contact .prenom-contact form .heading-three{
+    font-family: $spaceGrotesk;
+    font-weight: $fontWeightRegular;
+    font-size: $fontSizeSubTitle;
+    color: $grey;
+    margin: 1.5rem 0;
+}
+.contact .prenom-contact form .six{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .prenom-contact form .six textarea{
+    width: 100%;
+    padding: 0.4em 0;
+    height: 2rem;
+    resize: none;
+    background-color: transparent;
+    color: $grey;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $grey;
+}
+.contact .prenom-contact form .seven{
+    width: 100%;
+    height: 6rem;
+    display: grid;
+    place-items: center;
+}
+.contact .prenom-contact form .seven input[type="submit"]{
+    padding: 1rem 2rem;
+    font-family: $rajdhani;
+    font-size: $fontSizeButton;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(.25turn, $secondGradient);
+    color: $white;
+    transition: background .3s ease-in-out;
+    &:hover{
+        background: linear-gradient(.25turn, $secondGradientHover);
+    }
+}
+/*Replique*/
+.quote{
+    width: 100%;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 74vh;
+}
+.quote .contenu-quote{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    padding: 10rem 16rem;
+    position: relative;
+}
+.quote .contenu-quote .text-one{
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextFirst;
+    text-align: center;
+}
+.quote .contenu-quote .text-two{
+    color: $grey;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextSeconds;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.quote .contenu-quote .slide{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quote .contenu-quote .slide div{
+    width: 0.4rem;
+    height: 0.4rem;
+    border: 2px solid $blue;
+    border-radius: 50px;
+    margin: 0 0.2em;
+    cursor: pointer;
+}
+.quote .contenu-quote .slide .five{
+    background-color: #19587D;
+}
+.quote .contenu-quote .icon_guillemets_1{
+    position: absolute;
+    top: 17%;
+    left: 15%;
+}
+.quote .contenu-quote .icon_guillemets_2{
+    position: absolute;
+    bottom: 17%;
+    right: 15%;
+}
+/*footer*/
+footer{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+footer section{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    display: grid;
+    place-items: center;
+}
+footer section p{
+    color: $grey;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeTextSeconds;
+    display: flex;
+    align-items: center;
+}
+footer section p img{
+    margin: 0 1em;
+}
+footer section .logos-footer{
+    margin-bottom: 14rem;
+    display: flex;
+    align-items: center;
+}
+footer section .logos-footer img{
+    margin: 0 1em;
+    &:hover{
+        cursor: pointer;
+        filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+    }
+}
+/*Responsive*/
+
+
+@media screen and (max-width: 768px){
+    .home{
+        background:url(../Illustrations/Bathome1.png) no-repeat center center/contain;
+    }
+    .home .menu .one img{
+        width: 80px;
+        height: 56px;
+    }
+    .home .hero aside{
+        right: -4.3%;
+    }
+    .home .hero aside div.flèche-bat img{
+        width: 2em;
+        height: 2em;
+    }
+    .home .hero article div.contenu-bouton{
+        flex-direction: column;
+    }
+    .home .hero article div.contenu-text p{
+        font-size: $fontSizeTextFirstResponsive;
+        margin-top: 8em;
+    }
+    .home .menu div h1{
+        font-size: $fontSizeH1Responsive;
+    }
+    .home .hero article div.contenu-text h1{
+        font-size: $fontSizeH1Responsive;
+    }
+    .home .hero div.contenu-bouton .bouton{
+        font-size: $fontSizeButtonResponsive;
+        margin: 1em 0;
+    }
+    .cinema-batman{
+        height: 358vh;
+    }
+    .cinema-batman .art article h1{
+        font-size: $fontSizeH1Responsive;
+    }
+    .cinema-batman .art article p{
+        font-size: $fontSizeTextFirstResponsive;
+    }
+    .cinema-batman .contenu-cart-batman{
+        display: flex;
+        flex-direction: column;
+    }
+    .cinema-batman .contenu-cart-batman .div p{
+        font-size: $fontSizeSubTitleResponsive;
+    }
+    .nemesis{
+        height: 357vh;
+    }
+    .nemesis .art article h1{
+        font-size: $fontSizeH1Responsive;
+    }
+    .nemesis .art article img{
+        top: 0%;
+        left: 36%;
+        width: 8rem;
+        height: 7rem;
+    }
+    .nemesis .art article p{
+        font-size: $fontSizeTextFirstResponsive;
+    }
+    .nemesis .contenu-cart-nemesis{
+        display: flex;
+        flex-direction: column;
+    }
+    .nemesis .contenu-cart-nemesis .div p{
+        font-size: $fontSizeSubTitleResponsive;
+    }
+    .stl-batman{
+        height: 50vh;
+    }
+    .stl-batman div img{
+        top: 0%;
+    }
+    .allies{
+        height: 355vh;
+    }
+    .allies .art{
+        height: 100vh;
+    }
+    .allies .art article{
+        position: relative;
+        padding-top: 26rem;
+    }
+    .allies .art article h1{
+        padding-top: 2rem;
+        font-size: $fontSizeH1Responsive;
+    }
+    .allies .art article p{
+        font-size: $fontSizeTextFirstResponsive;
+    }
+    .allies .contenu-cart-allies{
+        display: flex;
+        flex-direction: column;
+    }
+    .allies .contenu-cart-allies .div p{
+        font-size: $fontSizeSubTitleResponsive;
+    }
+    .justice-league{
+        height: 100vh;
+    }
+    .justice-league .art article h1{
+        font-size: $fontSizeH1Responsive;
+    }
+    .justice-league .art article p{
+        font-size: $fontSizeTextFirstResponsive;
+    }
+    .cover-justice-league{
+        background: url(../Illustrations/Bathome11.png) no-repeat top center/contain;
+        height: 50vh;
+    }
+    .multimedia{
+        height: 200vh;
+    }
+    .multimedia .contenu-multimedia{
+        height: 150vh;
+    }
+    .multimedia .contenu-multimedia h1{
+        font-size: $fontSizeH1Responsive;
+    }
+    .multimedia .contenu-multimedia .slide button img{
+        width: 2em;
+        height: 2em;
+    }
+    .multimedia .contenu-multimedia .slide .card{
+        width: 60%;
+        height: 84vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .multimedia .contenu-multimedia .slide .card article{
+        border-radius: 12px;
+    }
+    .multimedia .annonce{
+        margin-top: 5.5rem;
+    }
+    .contact{
+        height: 150vh;
+        align-items: flex-start;
+    }
+    .contact .prenom-contact {
+        margin-top: 4rem;
+    }
+    .contact .prenom-contact .heading-one{
+        font-size: $fontSizeH1Responsive;
+    }
+    .contact .prenom-contact form .one .adresse-email{
+        font-size: $fontSizeSubTitleResponsive;
+    }
+    .contact .prenom-contact form .heading-two{
+        font-size: $fontSizeSubTitleResponsive;
+    }
+    .contact .prenom-contact form .two .check-news{
+        font-size: $fontSizeTextFirstResponsive;
+    }
+    .contact .prenom-contact form .five{
+        flex-direction: column;
+        height: 14rem;
+    }
+    .contact .prenom-contact form .five input[type="button"]{
+        margin: 0.5rem 0;
+    }
+    .contact .prenom-contact form .heading-three{
+        font-size: $fontSizeSubTitleResponsive;
+    }
+    .contact .prenom-contact form .six{
+        margin-bottom: 1rem;
+    }
+    .contact .prenom-contact form .six textarea{
+        height: 2.5rem;
+    }
+    .quote .contenu-quote{
+        padding: 0;
+    }
+    .quote .contenu-quote .slide{
+        margin-bottom: 14rem;
+    }
+    .quote .contenu-quote .text-one{
+        font-size: $fontSizeTextSeconds;
+        margin-top: 14rem;
+    }
+    .quote .contenu-quote .icon_guillemets_1{
+        width: 2em;
+        height: 2em;
+        top: 22%;
+    }
+    .quote .contenu-quote .icon_guillemets_2{
+        width: 2em;
+        height: 2em;
+        bottom: 26%;
+    }
+    footer section p{
+        padding: 0 2em;
+    }
+    footer section .logos-footer img{
+        margin: 0 0.5em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
