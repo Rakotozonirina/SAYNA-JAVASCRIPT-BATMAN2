@@ -55,9 +55,27 @@ body {
   filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
 }
 
-.home .menu .two h1 {
-  text-align: right;
-  margin-right: 4rem;
+.home .menu .two ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.home .menu .two ul li {
+  list-style: none;
+  padding: 0 2em;
+}
+
+.home .menu .two ul li:nth-child(1) a {
+  text-decoration: underline;
+}
+
+.home .menu .two ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 22px;
 }
 
 .home .menu div h1 {
@@ -944,6 +962,18 @@ footer section .logos-footer img:hover {
 @media screen and (max-width: 768px) {
   .home {
     background: url(../Illustrations/Bathome1.png) no-repeat center center/contain;
+  }
+  .home .menu {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+  }
+  .home .menu .two ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .home .menu .two ul li {
+    margin: 1em 0;
   }
   .home .menu .one img {
     width: 80px;
