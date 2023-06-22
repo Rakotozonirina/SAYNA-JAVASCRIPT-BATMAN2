@@ -62,6 +62,10 @@ $fontSizeTextSeconds: 12px;
 $fontSizeTextFirstResponsive: 16px;
 $fontWeightBold: bold;
 $fontWeightRegular: regular;
+$firstGradient: #AA7A48;
+$secondGradient: #B88340;
+$firstGradientHover: #B98036;
+$secondGradientHover: #5D433F;
 
 .home .menu{
     width: 86%;
@@ -149,6 +153,19 @@ $fontWeightRegular: regular;
     right: 3.2%;
     top: 32%;
     z-index: 1;
+}
+.first-show .bouton{
+    padding: 1rem 2rem;
+    font-family: $rajdhani;
+    font-size: $fontSizeButton;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(.25turn, $firstGradient, $secondGradient);
+    color: $white;
+    transition: background .3s ease-in-out;
+    &:hover{
+        background: linear-gradient(.25turn, $firstGradientHover, $secondGradientHover);
+    }
 }
 .home .hero aside div img{
     &:hover{
