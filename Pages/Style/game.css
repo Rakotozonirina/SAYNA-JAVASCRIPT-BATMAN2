@@ -177,6 +177,18 @@ body {
   border-left-width: 0.1rem;
   border-right-width: 0.1rem;
   border-bottom: none;
+  display: none;
+}
+
+.start-game .display-game {
+  width: 86%;
+  border-style: solid;
+  border-color: rgba(188, 187, 189, 0.2);
+  border-top: none;
+  border-left-width: 0.1rem;
+  border-right-width: 0.1rem;
+  border-bottom: none;
+  height: 100vh;
 }
 
 .start-game .first-show h2 {
@@ -231,6 +243,26 @@ footer .logos-footer img {
 footer .logos-footer img:hover {
   cursor: pointer;
   filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
+}
+
+#score {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+#imagesContainer {
+  border: 1px solid #ffffff;
+}
+
+#showquesopt {
+  border: 1px solid #ffffff;
+}
+
+#submit {
+  border: 1px solid #ffffff;
 }
 
 @media screen and (max-width: 768px) {

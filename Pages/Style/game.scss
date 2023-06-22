@@ -202,6 +202,17 @@ $secondGradientHover: #5D433F;
     border-left-width: $bordureWidthLeftHero;
     border-right-width: $bordureWidthRightHero;
     border-bottom: none;
+    display: none;
+}
+.start-game .display-game{
+    width: 86%;
+    border-style: $bordureStyle;
+    border-color: $lineDiscreteColor;
+    border-top: none;
+    border-left-width: $bordureWidthLeftHero;
+    border-right-width: $bordureWidthRightHero;
+    border-bottom: none;
+    height: 100vh;
 }
 .start-game .first-show h2{
     color: $white;
@@ -249,6 +260,22 @@ footer .logos-footer img{
         cursor: pointer;
         filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
     }
+}
+#score{
+    border: 1px solid $white;
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeSubTitle;
+    text-transform: uppercase;
+}
+#imagesContainer{
+    border: 1px solid $white;
+}
+#showquesopt{
+    border: 1px solid $white;
+}
+#submit{
+    border: 1px solid $white;
 }
 @media screen and (max-width: 768px){
     .home{

@@ -54,6 +54,23 @@
                 <div class="contentPic"></div>
                 <button type="button" class="bouton">DÉMARRER LE QUIZ</button>
             </section>
+            <section class="display-game">
+                <span id="score"></span>
+                <section class="content-image-question">
+                    <div id="imagesContainer">
+                        <img id="image" src="" alt="description of the image">
+                    </div>
+                    <section id="showquesopt">
+                        <div id="question"></div>
+                        <div id="options"></div>
+                    </section>
+                </section>
+                <div id="result">
+                    <h1 id="resultH1"></h1>
+                    <p id="resultP"></p>
+                </div>
+                <button id="submit">Question Suivant</button>
+            </section>
             <footer>
                 <p> <img src="../../Logos/icon_WB.png" alt="icon_WB"> Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves</p>
                 <div class="logos-footer">
@@ -67,5 +84,6 @@
             </footer>
         </section>
     </main>
+    <script src="./game.js"></script>
 </body>
 </html>
