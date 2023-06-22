@@ -128,6 +128,15 @@ body {
   z-index: 1;
 }
 
+.first-show {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .first-show .bouton {
   padding: 1rem 2rem;
   font-family: "Rajdhani", sans-serif;
@@ -180,7 +189,48 @@ body {
 .start-game .first-show .contentPic {
   width: 70%;
   height: 70vh;
+  margin: 1.5em 0;
   background: url(../../Illustrations/IllustrationGame/Batgame_2.png) no-repeat center center/cover;
+}
+
+footer {
+  width: 86%;
+  height: 50vh;
+  border-style: solid;
+  border-color: rgba(188, 187, 189, 0.2);
+  border-top: none;
+  border-left-width: 0.1rem;
+  border-right-width: 0.1rem;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #C4C4C4;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+footer p img {
+  margin: 0 1em;
+}
+
+footer .logos-footer {
+  display: flex;
+  align-items: center;
+}
+
+footer .logos-footer img {
+  margin: 0 1em;
+}
+footer .logos-footer img:hover {
+  cursor: pointer;
+  filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
 }
 
 @media screen and (max-width: 768px) {
@@ -215,6 +265,21 @@ body {
   }
   .home .menu div h1 {
     font-size: 34px;
+  }
+  .start-game .first-show h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  footer p {
+    padding: 0 2em;
+  }
+  footer .logos-footer {
+    margin: 1.5em 0;
+  }
+  footer .logos-footer img {
+    margin: 0 0.5em;
+    width: 1.5em;
+    height: 1.5em;
   }
 }
 
