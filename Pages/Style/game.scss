@@ -123,8 +123,20 @@ $fontWeightRegular: regular;
     border-right-width: $bordureWidthRightHero;
     border-bottom: none;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.home .hero article{
+    display: block;
+    margin-right: auto;
+    padding: 4em;
+}
+.home .hero article h1{
+    text-transform: uppercase;
+    color: $white;
+    font-family: $spaceGrotesk;
+    font-size: $fontSizeH1;
 }
 .home .hero aside{
     display: flex;
@@ -151,7 +163,7 @@ $fontWeightRegular: regular;
 } 
 @media screen and (max-width: 768px){
     .home{
-        background:url(../Illustrations/Bathome1.png) no-repeat center center/contain;
+        background:url(../../Illustrations/IllustrationGame/Batgame_1.png) no-repeat center center/contain;
     }
     .home .menu{
         display: flex;
@@ -168,6 +180,9 @@ $fontWeightRegular: regular;
     .home .menu .one img{
         width: 80px;
         height: 56px;
+    }
+    .home .hero article h1{
+        font-size: $fontSizeH1Responsive;
     }
     .home .hero aside{
         right: -4.3%;
