@@ -958,6 +958,7 @@ footer section .logos-footer img:hover {
   filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
 }
 
+/*animation*/
 /*Responsive*/
 @media screen and (max-width: 768px) {
   .home {
