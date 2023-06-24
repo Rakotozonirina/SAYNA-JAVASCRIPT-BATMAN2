@@ -90,14 +90,18 @@ function displayQuestion() {
     optionsContainer.innerHTML = "";
 
     options[currentQuestion].forEach((option) =>{
+        const contenaire = document.createElement("div");
+        contenaire.className = "cnt-inp";
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.value = option;
         checkbox.required = true;
+        contenaire.appendChild(checkbox);
         const label = document.createElement("label");
         label.appendChild(checkbox);
         label.appendChild(document.createTextNode(option));
-        optionsContainer.appendChild(label);
+        contenaire.appendChild(label)
+        optionsContainer.appendChild(contenaire);
     });
 }
 

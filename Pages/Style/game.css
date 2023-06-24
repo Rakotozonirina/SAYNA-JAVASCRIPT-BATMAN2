@@ -188,6 +188,11 @@ body {
   border-left-width: 0.1rem;
   border-right-width: 0.1rem;
   border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   height: 100vh;
 }
 
@@ -246,7 +251,6 @@ footer .logos-footer img:hover {
 }
 
 #score {
-  border: 1px solid #ffffff;
   color: #ffffff;
   font-family: "Space Grotesk", sans-serif;
   font-size: 22px;
@@ -254,15 +258,92 @@ footer .logos-footer img:hover {
 }
 
 #imagesContainer {
-  border: 1px solid #ffffff;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imagesContainer img {
+  max-inline-size: 100%;
+  block-size: auto;
 }
 
 #showquesopt {
-  border: 1px solid #ffffff;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#showquesopt #question {
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  margin-bottom: 1em;
+}
+
+#showquesopt #options .cnt-inp {
+  padding: 1em 0.4em;
+  background-color: rgba(237, 222, 191, 0.4);
+  margin: 0.5em 0;
+}
+
+#showquesopt #options .cnt-inp input[type=checkbox] {
+  width: 1.8em;
+  height: 1.8em;
+  margin: 0 0.5em;
+}
+
+#showquesopt #options .cnt-inp label {
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 #submit {
+  padding: 1rem 2rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(0.25turn, #AA7A48, #B88340);
+  color: #ffffff;
+  transition: background 0.3s ease-in-out;
+}
+#submit:hover {
+  background: linear-gradient(0.25turn, #B98036, #5D433F);
+}
+
+#result {
   border: 1px solid #ffffff;
+  width: 80%;
+  position: absolute;
+  height: 70vh;
+  border-radius: 16px;
+}
+
+#result #resultH1 {
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 34px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#result #resultP {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.content-image-question {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  margin: 1.5em 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -312,6 +393,26 @@ footer .logos-footer img:hover {
     margin: 0 0.5em;
     width: 1.5em;
     height: 1.5em;
+  }
+  .content-image-question {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 120vh;
+  }
+  #imagesContainer {
+    width: auto;
+  }
+  #showquesopt {
+    width: auto;
+  }
+  #showquesopt #question {
+    text-align: center;
+  }
+  .start-game {
+    height: 180vh;
+  }
+  .start-game .display-game {
+    height: 170vh;
   }
 }
 
