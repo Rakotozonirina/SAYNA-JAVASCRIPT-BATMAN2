@@ -202,7 +202,6 @@ $secondGradientHover: #5D433F;
     border-left-width: $bordureWidthLeftHero;
     border-right-width: $bordureWidthRightHero;
     border-bottom: none;
-    display: none;
 }
 .start-game .display-game{
     width: 86%;
@@ -218,6 +217,7 @@ $secondGradientHover: #5D433F;
     align-items: center;
     position: relative;
     height: 100vh;
+    border: 1px solid $white;
 }
 .start-game .first-show h2{
     color: $white;
@@ -271,6 +271,7 @@ footer .logos-footer img{
     font-family: $spaceGrotesk;
     font-size: $fontSizeSubTitle;
     text-transform: uppercase;
+    border: 1px solid $white;
 }
 #imagesContainer{
     width: 20rem;
@@ -322,13 +323,18 @@ footer .logos-footer img{
     &:hover{
         background: linear-gradient(.25turn, $firstGradientHover, $secondGradientHover);
     }
+    z-index: 3;
 }
 #result{
-    border: 1px solid $white;
     width: 80%;
     position: absolute;
     height: 70vh;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 #result #resultH1{
     color: $white;
@@ -339,8 +345,27 @@ footer .logos-footer img{
 }
 #result #resultP{
     color: $white;
-    border: 1px solid $white;
+    font-family: $spaceGrotesk;
+    text-align: center;
+    width: 60%;
+    margin: 2rem 0;
+}
+.start-game .display-game a{
+    z-index: 2;
+    margin-block-end: 9em;
+}
+#mybutton{
+    padding: 1rem 2rem;
     font-family: $rajdhani;
+    font-size: $fontSizeButton;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(.25turn, $firstGradient, $secondGradient);
+    color: $white;
+    transition: background .3s ease-in-out;
+    &:hover{
+        background: linear-gradient(.25turn, $firstGradientHover, $secondGradientHover);
+    }
 }
 .content-image-question{
     width: 100%;
@@ -348,6 +373,7 @@ footer .logos-footer img{
     justify-content: center;
     height: 70vh;
     margin: 1.5em 0;
+    z-index: 2;
 }
 @media screen and (max-width: 768px){
     .home{
@@ -416,5 +442,8 @@ footer .logos-footer img{
     }
     .start-game .display-game{
         height: 170vh;
+    }
+    #result #resultH1{
+        text-align: center;
     }
 }

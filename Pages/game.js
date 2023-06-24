@@ -66,6 +66,14 @@ const imagePath = [
     "../Illustrations/IllustrationGame/Batgame_6.png",
     "../Illustrations/IllustrationGame/Batgame_8.png"
 ];
+
+const startGame = document.querySelector(".bouton");
+
+startGame.addEventListener("click", () => {
+    const displayCoverGame = document.querySelector(".first-show");
+    displayCoverGame.style.display = "none";
+});
+
 let score = 0;
 
 let currentQuestion = 0;
@@ -147,35 +155,41 @@ function displayResult(){
     ContainerImage.style.display = "none";
     const DisplayQuestion = document.getElementById("score");
     DisplayQuestion.style.display = "none";
-    const containerResult = document.getElementById("result");
+    const containerResult = document.querySelector(".display-game");
     const resultH1 = document.getElementById("resultH1");
     const resultP = document.getElementById("resultP");
     if(score <= 5){
         resultH1.textContent = score + "/" + 5 + " c'est pas tout a fait ça...";
         resultP.textContent = "Oula ! heureusement que le Riddler est sous les verous... il faut que vous vous repassiez les films, cette fois en enlevant peut-etre le masque qui vous a bloqué la vue ! Aller, rien n'est perdu ! ";
+        const anchor = document.createElement("a");
+        anchor.href = "./game.html";
         const btn = document.createElement("button");
         btn.id = "mybutton";
         btn.textContent = "recommencer le quiz";
-        containerResult.appendChild(btn);
-        btn.addEventListener("click", resetResult);
+        anchor.appendChild(btn);
+        containerResult.appendChild(anchor);
     }
     if(score > 5 && score <= 10){
         resultH1.textContent = score + "/" + questions.length + " pas mal!";
         resultP.textContent = "Encore un peu d'entrainement avec le Chevalier Noir vous serait bénéfique, mais vous pouvez marcher la tete haute vos connaissances sont là, A vous de les consolider, foncez Gotham est votre terrain de chasse ! ";
+        const anchor = document.createElement("a");
+        anchor.href = "./game.html";
         const btn = document.createElement("button");
         btn.id = "mybutton";
         btn.textContent = "recommencer le quiz";
-        containerResult.appendChild(btn);
-        btn.addEventListener("click", resetResult);
+        anchor.appendChild(btn);
+        containerResult.appendChild(anchor);
     }
     if(score > 10 && score <= questions.length){
         resultH1.textContent = score + "/" + questions.length + " bravo!";
         resultP.textContent = "Vous etes véritablement un super fan de l'univers de Batman ! Comics, films, rien ne vous échapper. Bruce Wayne a de quoi etre fier, Gotham est en paix et Batman peut prendre sa retraite, vous veillez aux gains ! ";
+        const anchor = document.createElement("a");
+        anchor.href = "./game.html";
         const btn = document.createElement("button");
         btn.id = "mybutton";
         btn.textContent = "recommencer le quiz";
-        containerResult.appendChild(btn);
-        btn.addEventListener("click", resetResult);
+        anchor.appendChild(btn);
+        containerResult.appendChild(anchor);
     }
 
 }
