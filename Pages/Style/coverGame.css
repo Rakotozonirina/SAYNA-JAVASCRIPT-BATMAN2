@@ -169,7 +169,7 @@ body {
   align-items: center;
 }
 
-.start-game .display-game {
+.start-game .first-show {
   width: 86%;
   border-style: solid;
   border-color: rgba(188, 187, 189, 0.2);
@@ -177,12 +177,20 @@ body {
   border-left-width: 0.1rem;
   border-right-width: 0.1rem;
   border-bottom: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100vh;
+}
+
+.start-game .first-show h2 {
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.start-game .first-show .contentPic {
+  width: 70%;
+  height: 70vh;
+  margin: 1.5em 0;
+  background: url(../../Illustrations/IllustrationGame/Batgame_2.png) no-repeat center center/cover;
 }
 
 footer {
@@ -225,130 +233,6 @@ footer .logos-footer img:hover {
   filter: brightness(75%) sepia(80) saturate(20) hue-rotate(5deg);
 }
 
-#score {
-  color: #ffffff;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 22px;
-  text-transform: uppercase;
-}
-
-#imagesContainer {
-  width: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#imagesContainer img {
-  max-inline-size: 100%;
-  block-size: auto;
-}
-
-#showquesopt {
-  width: 30rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#showquesopt #question {
-  color: #ffffff;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 22px;
-  margin-bottom: 1em;
-}
-
-#showquesopt #options .cnt-inp {
-  padding: 1em 0.4em;
-  background-color: rgba(237, 222, 191, 0.4);
-  margin: 0.5em 0;
-}
-
-#showquesopt #options .cnt-inp input[type=checkbox] {
-  width: 1.8em;
-  height: 1.8em;
-  margin: 0 0.5em;
-}
-
-#showquesopt #options .cnt-inp label {
-  color: #ffffff;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-#submit {
-  padding: 1rem 2rem;
-  font-family: "Rajdhani", sans-serif;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-  background: linear-gradient(0.25turn, #AA7A48, #B88340);
-  color: #ffffff;
-  transition: background 0.3s ease-in-out;
-  z-index: 2;
-}
-#submit:hover {
-  background: linear-gradient(0.25turn, #B98036, #5D433F);
-}
-
-#result {
-  width: 80%;
-  position: absolute;
-  height: 70vh;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-#result #resultH1 {
-  color: #ffffff;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 34px;
-  text-decoration: underline;
-  text-transform: uppercase;
-}
-
-#result #resultP {
-  color: #ffffff;
-  font-family: "Space Grotesk", sans-serif;
-  text-align: center;
-  width: 60%;
-  margin: 2rem 0;
-}
-
-.start-game .display-game a {
-  z-index: 2;
-  margin-block-end: 9em;
-}
-
-#mybutton {
-  padding: 1rem 2rem;
-  font-family: "Rajdhani", sans-serif;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  background: linear-gradient(0.25turn, #AA7A48, #B88340);
-  color: #ffffff;
-  transition: background 0.3s ease-in-out;
-}
-#mybutton:hover {
-  background: linear-gradient(0.25turn, #B98036, #5D433F);
-}
-
-.content-image-question {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 70vh;
-  margin: 1.5em 0;
-  z-index: 2;
-}
-
 @media screen and (max-width: 768px) {
   .home {
     background: url(../../Illustrations/IllustrationGame/Batgame_1.png) no-repeat center center/contain;
@@ -382,6 +266,10 @@ footer .logos-footer img:hover {
   .home .menu div h1 {
     font-size: 34px;
   }
+  .start-game .first-show h2 {
+    font-size: 20px;
+    text-align: center;
+  }
   footer p {
     padding: 0 2em;
   }
@@ -393,29 +281,6 @@ footer .logos-footer img:hover {
     width: 1.5em;
     height: 1.5em;
   }
-  .content-image-question {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: 120vh;
-  }
-  #imagesContainer {
-    width: auto;
-  }
-  #showquesopt {
-    width: auto;
-  }
-  #showquesopt #question {
-    text-align: center;
-  }
-  .start-game {
-    height: 180vh;
-  }
-  .start-game .display-game {
-    height: 170vh;
-  }
-  #result #resultH1 {
-    text-align: center;
-  }
 }
 
-/*# sourceMappingURL=game.css.map */
+/*# sourceMappingURL=coverGame.css.map */
