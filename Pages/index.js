@@ -22,3 +22,9 @@ gsap.to(".who-allies", {
     keyframes: [{ duration:2, x:50, opacity: 0}, {duration:2, x:0, opacity:1}],
     delay: 12
 });
+gsap.to(".who-justice-league", {
+    scrollTrigger: ".justice-league",
+    yoyo: true,
+    keyframes: [{ duration:2, x:50, opacity: 0}, {duration:2, x:0, opacity:1}],
+    delay: 16
+})
