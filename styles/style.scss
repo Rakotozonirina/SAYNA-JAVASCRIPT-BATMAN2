@@ -201,7 +201,7 @@ $secondGradientHover: $greyButtonColorHoverOne, $redButtonColorHover;
 .cinema-batman{
     background-color: $black;
     width: 100%;
-    height: 140vh;
+    height: 126vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -255,6 +255,41 @@ $secondGradientHover: $greyButtonColorHoverOne, $redButtonColorHover;
         -webkit-transform: scale(1.1); /* Safari 3-8 */
         transform: scale(1.1); 
     }
+    position: relative;
+}
+.contenu-cart-batman .one #content-pattinson{
+    border: 1.5px solid $grey;
+    width: 83.4%;
+    height: 5em;
+    position: absolute;
+    left: 8.4%;
+    bottom: 0%;
+    background-color: $lineDiscreteColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.contenu-cart-batman .one #content-pattinson .btn-pattinson{
+    width: 75%;
+    height: 4em;
+    border-radius: 38px;
+    background: linear-gradient(.25turn, $secondGradient);
+    display: grid;
+    grid-template-columns: 1fr 2.4fr;
+    gap: 0.5em;
+}
+.contenu-cart-batman .one #content-pattinson .btn-pattinson .img-pattinson{
+    border-radius: 50px;
+    background: url(../Illustrations/Bathome_BobPattinson.png) no-repeat center center/cover;
+}
+.contenu-cart-batman .one #content-pattinson .btn-pattinson .txt-pattinson .para-pattinson{
+    font-size: $fontSizeTextSeconds;
+    text-align: center;
+}
+.contenu-cart-batman .one #content-pattinson .btn-pattinson .txt-pattinson .para-pattinson span{
+    color: $yellow;
 }
 .cinema-batman .contenu-cart-batman .two{
     transition: transform .2s;
@@ -264,6 +299,41 @@ $secondGradientHover: $greyButtonColorHoverOne, $redButtonColorHover;
         -webkit-transform: scale(1.1); /* Safari 3-8 */
         transform: scale(1.1); 
     }
+    position: relative;
+}
+.contenu-cart-batman .two #content-christian{
+    border: 1.5px solid $grey;
+    width: 83.4%;
+    height: 5em;
+    position: absolute;
+    left: 8.4%;
+    bottom: 0%;
+    background-color: $lineDiscreteColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.contenu-cart-batman .two #content-christian .btn-christian{
+    width: 75%;
+    height: 4em;
+    border-radius: 38px;
+    background: linear-gradient(.25turn, $secondGradient);
+    display: grid;
+    grid-template-columns: 1fr 2.4fr;
+    gap: 0.5em;
+}
+.contenu-cart-batman .two #content-christian .btn-christian .img-christian{
+    border-radius: 50px;
+    background: url(../Illustrations/Bathome_ChristianBale.png) no-repeat center center/cover;
+}
+.contenu-cart-batman .two #content-christian .btn-christian .txt-christian .para-christian{
+    font-size: $fontSizeTextSeconds;
+    text-align: center;
+}
+.contenu-cart-batman .two #content-christian .btn-christian .txt-christian .para-christian span{
+    color: $yellow;
 }
 .cinema-batman .contenu-cart-batman .three{
     transition: transform .2s;
@@ -273,6 +343,41 @@ $secondGradientHover: $greyButtonColorHoverOne, $redButtonColorHover;
         -webkit-transform: scale(1.1); /* Safari 3-8 */
         transform: scale(1.1); 
     }
+    position: relative;
+}
+.contenu-cart-batman .three #content-ben{
+    border: 1.5px solid $grey;
+    width: 83.4%;
+    height: 5em;
+    position: absolute;
+    left: 8.4%;
+    bottom: 0%;
+    background-color: $lineDiscreteColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.contenu-cart-batman .three #content-ben .btn-ben{
+    width: 75%;
+    height: 4em;
+    border-radius: 38px;
+    background: linear-gradient(.25turn, $secondGradient);
+    display: grid;
+    grid-template-columns: 1fr 2.4fr;
+    gap: 0.5em;
+}
+.contenu-cart-batman .three #content-ben .btn-ben .img-ben{
+    border-radius: 50px;
+    background: url(../Illustrations/Bathome_BenAffleck.png) no-repeat center center/cover;
+}
+.contenu-cart-batman .three #content-ben .btn-ben .txt-ben .para-ben{
+    font-size: $fontSizeTextSeconds;
+    text-align: center;
+}
+.contenu-cart-batman .three #content-ben .btn-ben .txt-ben .para-ben span{
+    color: $yellow;
 }
 .cinema-batman .contenu-cart-batman .div p{
     color: $white;

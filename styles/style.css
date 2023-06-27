@@ -177,7 +177,7 @@ body {
 .cinema-batman {
   background-color: #000000;
   width: 100%;
-  height: 140vh;
+  height: 126vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -232,6 +232,7 @@ body {
 .cinema-batman .contenu-cart-batman .one {
   transition: transform 0.2s;
   cursor: pointer;
+  position: relative;
 }
 .cinema-batman .contenu-cart-batman .one:hover {
   -ms-transform: scale(1.1); /* IE 9 */
@@ -239,9 +240,49 @@ body {
   transform: scale(1.1);
 }
 
+.contenu-cart-batman .one #content-pattinson {
+  border: 1.5px solid #C4C4C4;
+  width: 83.4%;
+  height: 5em;
+  position: absolute;
+  left: 8.4%;
+  bottom: 0%;
+  background-color: rgba(188, 187, 189, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.contenu-cart-batman .one #content-pattinson .btn-pattinson {
+  width: 75%;
+  height: 4em;
+  border-radius: 38px;
+  background: linear-gradient(0.25turn, rgba(237, 222, 191, 0.4), rgba(137, 0, 8, 0.6));
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  gap: 0.5em;
+}
+
+.contenu-cart-batman .one #content-pattinson .btn-pattinson .img-pattinson {
+  border-radius: 50px;
+  background: url(../Illustrations/Bathome_BobPattinson.png) no-repeat center center/cover;
+}
+
+.contenu-cart-batman .one #content-pattinson .btn-pattinson .txt-pattinson .para-pattinson {
+  font-size: 12px;
+  text-align: center;
+}
+
+.contenu-cart-batman .one #content-pattinson .btn-pattinson .txt-pattinson .para-pattinson span {
+  color: #F8F184;
+}
+
 .cinema-batman .contenu-cart-batman .two {
   transition: transform 0.2s;
   cursor: pointer;
+  position: relative;
 }
 .cinema-batman .contenu-cart-batman .two:hover {
   -ms-transform: scale(1.1); /* IE 9 */
@@ -249,14 +290,93 @@ body {
   transform: scale(1.1);
 }
 
+.contenu-cart-batman .two #content-christian {
+  border: 1.5px solid #C4C4C4;
+  width: 83.4%;
+  height: 5em;
+  position: absolute;
+  left: 8.4%;
+  bottom: 0%;
+  background-color: rgba(188, 187, 189, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.contenu-cart-batman .two #content-christian .btn-christian {
+  width: 75%;
+  height: 4em;
+  border-radius: 38px;
+  background: linear-gradient(0.25turn, rgba(237, 222, 191, 0.4), rgba(137, 0, 8, 0.6));
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  gap: 0.5em;
+}
+
+.contenu-cart-batman .two #content-christian .btn-christian .img-christian {
+  border-radius: 50px;
+  background: url(../Illustrations/Bathome_ChristianBale.png) no-repeat center center/cover;
+}
+
+.contenu-cart-batman .two #content-christian .btn-christian .txt-christian .para-christian {
+  font-size: 12px;
+  text-align: center;
+}
+
+.contenu-cart-batman .two #content-christian .btn-christian .txt-christian .para-christian span {
+  color: #F8F184;
+}
+
 .cinema-batman .contenu-cart-batman .three {
   transition: transform 0.2s;
   cursor: pointer;
+  position: relative;
 }
 .cinema-batman .contenu-cart-batman .three:hover {
   -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1);
+}
+
+.contenu-cart-batman .three #content-ben {
+  border: 1.5px solid #C4C4C4;
+  width: 83.4%;
+  height: 5em;
+  position: absolute;
+  left: 8.4%;
+  bottom: 0%;
+  background-color: rgba(188, 187, 189, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.contenu-cart-batman .three #content-ben .btn-ben {
+  width: 75%;
+  height: 4em;
+  border-radius: 38px;
+  background: linear-gradient(0.25turn, rgba(237, 222, 191, 0.4), rgba(137, 0, 8, 0.6));
+  display: grid;
+  grid-template-columns: 1fr 2.4fr;
+  gap: 0.5em;
+}
+
+.contenu-cart-batman .three #content-ben .btn-ben .img-ben {
+  border-radius: 50px;
+  background: url(../Illustrations/Bathome_BenAffleck.png) no-repeat center center/cover;
+}
+
+.contenu-cart-batman .three #content-ben .btn-ben .txt-ben .para-ben {
+  font-size: 12px;
+  text-align: center;
+}
+
+.contenu-cart-batman .three #content-ben .btn-ben .txt-ben .para-ben span {
+  color: #F8F184;
 }
 
 .cinema-batman .contenu-cart-batman .div p {
